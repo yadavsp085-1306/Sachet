@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sachet</title>
+  <style>
+    body {
+      background: #b6fcb6;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 40px;
+    }
+    #logo {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 40px;
+    }
+    button {
+      background: #006400;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover { background: #004d00; }
+    .word {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="gandhi house.png" src="your-logo.png" alt="Logo">
+
+  <h1>GANDHI HOUSE</h1>
+
+  <button onclick="speakWord()">🔊 Hear Pronunciation</button>
+
+  <div class="word">SACHET</div>
+
+<script>
+  const word = "Sachet";
+  function speakWord() {
+    const u = new SpeechSynthesisUtterance(word);
+    u.rate = 0.9;
+    speechSynthesis.speak(u);
+  }
+</script>
+
+</body>
+</html>
+
+
